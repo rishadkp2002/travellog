@@ -1,0 +1,226 @@
+/* =======================
+   GLOBAL RESET & THEME
+======================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #4f46e5;
+    --secondary: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --dark: #1f2937;
+    --light: #f9fafb;
+    --glass: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =======================
+   BODY BACKGROUND
+======================= */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2, #43cea2);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    padding: 20px;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =======================
+   MAIN CONTAINER
+======================= */
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =======================
+   HEADER
+======================= */
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    color: #fff;
+    padding: 18px 25px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+.user-header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.user-header a:hover {
+    opacity: 0.8;
+}
+
+
+/* =======================
+   FORMS
+======================= */
+
+label {
+    font-weight: 600;
+    margin-top: 18px;
+    display: block;
+    color: var(--dark);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    margin-top: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/* =======================
+   BUTTON
+======================= */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =======================
+   ALERTS
+======================= */
+
+.error,
+.success {
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.error {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+}
+
+.success {
+    background: rgba(34, 197, 94, 0.15);
+    color: var(--secondary);
+}
+
+
+/* =======================
+   TABLE
+======================= */
+
+table {
+    width: 100%;
+    margin-top: 35px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    color: #fff;
+    font-size: 14px;
+}
+
+tr {
+    background: #fff;
+    transition: background 0.3s;
+}
+
+tr:hover {
+    background: #f3f4f6;
+}
+
+
+/* =======================
+   STATUS BADGES
+=====
